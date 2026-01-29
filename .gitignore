@@ -1,12 +1,12 @@
 # Data
-data/
+
 *.gpkg
 *.csv
 *.nc
 *.grb2
 
 # Outputs
-outputs/
+
 *.html
 *.png
 *.log

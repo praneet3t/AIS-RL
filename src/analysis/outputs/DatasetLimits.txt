@@ -1,0 +1,25 @@
+========================================
+   DATASET BOUNDARIES (RL SPECS)
+========================================
+Total Tracks: 24363
+--------------------
+SPATIAL BOUNDING BOX (For Weather/Grid):
+  North (Max Lat): 51.4980
+  South (Min Lat): 15.2151
+  East  (Max Lon): -60.0079
+  West  (Min Lon): -160.5425
+--------------------
+TEMPORAL RANGE:
+  Earliest Date:   2024-01-12 20:24:19+00:00
+  Latest Date:     2024-10-13 04:04:43.000010+00:00
+  Total Duration:  274 days
+========================================
+
+[Recommendation] RL Environment Bounds (+1 Degree Buffer):
+N: 52.50, S: 14.22, E: -59.01, W: -161.54
+
+
+Filtering Cargo (separate .py)
+--- FILTER COMPLETE ---
+Total Files Scanned: 24363
+Cargo Ships Isolated: 12146
