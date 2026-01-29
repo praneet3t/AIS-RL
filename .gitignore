@@ -1,0 +1,20 @@
+# Data
+data/
+*.gpkg
+*.csv
+*.nc
+*.grb2
+
+# Outputs
+outputs/
+*.html
+*.png
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+venv/
+AISVesselTracks2024/
