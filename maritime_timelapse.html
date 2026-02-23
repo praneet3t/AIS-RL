@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 45.0,
+    "longitude": -85.0,
+    "pitch": 45,
+    "zoom": 5
+  },
+  "layers": [
+    {
+      "@@type": "HeatmapLayer",
+      "data": [],
+      "getPosition": "@@=[lon, lat]",
+      "getWeight": "@@=weight",
+      "id": "cc5b3ed7-2926-4072-8781-63900e8b592c",
+      "intensity": 1,
+      "radiusPixels": 50,
+      "threshold": 0.1
+    },
+    {
+      "@@type": "TripsLayer",
+      "currentTime": 0,
+      "data": [],
+      "getColor": [
+        0,
+        255,
+        255,
+        200
+      ],
+      "getPath": "@@=path",
+      "getTimestamps": "@@=path.map(p => p[2])",
+      "id": "807b4626-7827-4757-a5d0-55506312c7cb",
+      "trailLength": 15000,
+      "widthMinPixels": 3
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "mapbox://styles/mapbox/dark-v10",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = true;
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>
