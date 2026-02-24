@@ -1,0 +1,19 @@
+name: ais_rl
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10               # Stable version for RL/Data Science
+  - pandas                    # Data manipulation
+  - numpy<2.0                     # Math core
+  - geopandas                 # The hardest lib to install (Conda handles it best)
+  - fiona                     # File I/O for geospatial data
+  - shapely                   # Geometric operations
+  - folium                    # Interactive maps
+  - matplotlib                # Static plotting
+  - seaborn                   # Statistical visualization
+  - mapclassify               # For coloring maps
+  - jupyter                   # For running notebooks
+  - pip                       # Pip for anything else
+  - pip:
+    - tqdm                    # Progress bars (optional but good)
